@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import ReduxStoreProvider from "@/src/redux/ReduxStoreProvider";
-import ServiceWorkerRegister from "@/src/components/pwa/ServiceWorkerRegister";
 
 export const metadata: Metadata = {
   // Basic Info
@@ -165,7 +164,6 @@ export default function RootLayout({
         <ReduxStoreProvider>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <div className="bg-white dark:bg-black">{children}</div>
-            <ServiceWorkerRegister />
           </ThemeProvider>
         </ReduxStoreProvider>
       </body>

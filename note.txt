@@ -1,0 +1,1 @@
+"@ducanh2912/next-pwa": "10.2.9" for pwa
