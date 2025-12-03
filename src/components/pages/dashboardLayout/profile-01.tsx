@@ -23,8 +23,7 @@ interface Profile01Props {
 const defaultProfile = {
   name: "Name",
   role: "Admin Founder",
-  avatar:
-    "https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-02-albo9B0tWOSLXCVZh9rX9KFxXIVWMr.png",
+  avatar: "/user.png",
   subscription: "Free Trial",
 } satisfies Required<Profile01Props>;
 
@@ -51,7 +50,7 @@ export default function Profile01({
   return (
     <div className="relative w-full max-w-sm mx-auto z-100000">
       <div className="relative overflow-hidden rounded-lg border border-zinc-200  ">
-        <div className="relative px-6 pt-6 pb-6 z-999999">
+        <div className="relative px-4 py-4 z-999999">
           <div className="flex items-center gap-4 mb-6">
             <div className="relative shrink-0">
               <Image

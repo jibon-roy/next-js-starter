@@ -53,7 +53,7 @@ export const DropdownMenuContent = ({
     <div
       ref={ref}
       className={`absolute z-10000 ${
-        align === "end" ? "right-0" : "left-0"
+        align === "end" ? "-left-16 lg:right-0" : "left-0"
       } ${className}`}
       style={{
         marginTop: sideOffset,

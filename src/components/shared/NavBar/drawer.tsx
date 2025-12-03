@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { NavItem, DrawerProps, DropdownItem } from "./types";
 import { useSelector } from "react-redux";
 import { RootState } from "@/src/redux/store";
+import UserDropdown from "./UserDropdown";
 
 export const Drawer = ({
   isOpen,
@@ -12,7 +13,7 @@ export const Drawer = ({
   navItems,
   buttons,
   backgroundColor = "bg-white",
-  textColor = "text-gray-800",
+  textColor = "text-white",
   activeTextColor = "text-blue-600",
   width = "w-64",
   zIndex = "z-50",
@@ -69,7 +70,8 @@ export const Drawer = ({
       >
         <div className="flex flex-col z-50 h-full">
           {/* Close button */}
-          <div className="flex py-2 justify-end px-4">
+          <div className="flex py-2 justify-between px-4">
+            <UserDropdown className="mr-2" />
             <button
               onClick={onClose}
               className={`p-1 rounded-md border ${textColor} focus:outline-none`}

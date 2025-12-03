@@ -1,14 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
-import {
-  BarChart2,
-  Building2,
-  Folder,
-  Settings,
-  LogOut,
-  Menu,
-} from "lucide-react";
+import { BarChart2, Building2, Folder, LogOut, Menu } from "lucide-react";
 
 import { Home } from "lucide-react";
 import Link from "next/link";
@@ -36,8 +29,8 @@ function NavItem({
     <Link
       href={href}
       className={`flex items-center px-3 py-2 text-sm md:text-base rounded-md transition-colors 
-        ${isActive(href) ? "text-blue-600 bg-blue-100" : "text-gray-600"} 
-        hover:text-gray-900 hover:bg-gray-100`}
+        ${isActive(href) ? "bg-[#0EA5E9]" : "text-[#B5B7BD]"} 
+        hover:text-gray-100 hover:bg-gray-600`}
     >
       {Icon && <Icon className="h-5 w-5 mr-3 shrink-0" />}
       {children}
@@ -59,13 +52,13 @@ export default function Sidebar() {
     <>
       <button
         type="button"
-        className="lg:hidden fixed top-4 left-4 z-70 p-2 rounded-lg bg-white shadow-md"
+        className="lg:hidden fixed top-4 left-4 z-70 p-2 rounded-lg bg-white shadow-lg border border-gray-200 cursor-pointer"
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
       >
         <Menu className="h-5 w-5 text-gray-600" />
       </button>
       <nav
-        className={`fixed inset-y-0 left-0 z-70 w-64 bg-white transform transition-transform duration-200 ease-in-out
+        className={`fixed inset-y-0 left-0 z-70 w-64 bg-[#0F172A] transform transition-transform duration-200 ease-in-out
                 lg:translate-x-0 lg:static lg:w-64 border-r border-gray-200
                 ${isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"}`}
       >
@@ -74,7 +67,7 @@ export default function Sidebar() {
             href="/"
             target="_blank"
             rel="noopener noreferrer"
-            className="h-16 px-6 flex items-center border-b border-gray-200"
+            className="h-16 px-6 flex items-center border-b-2 border-dashed border-gray-300"
           >
             <div className="flex items-center gap-3">
               {/* <Image
@@ -84,10 +77,7 @@ export default function Sidebar() {
                 height={32}
                 className="flex-shrink-0 hidden dark:block"
               /> */}
-              <FcCdLogo size={150} className="h-10 w-auto mr-3" />
-              <span className="text-lg font-semibold hover:cursor-pointer text-gray-900 dark:text-white">
-                Logo
-              </span>
+              <FcCdLogo size={150} className="h-20 w-auto mr-3" />
             </div>
           </Link>
 
@@ -112,20 +102,15 @@ export default function Sidebar() {
             </div>
           </div>
 
-          <div className="px-4 py-4 border-t border-gray-200">
+          <div className="px-4 py-4">
             <div className="space-y-1">
-              <NavItem href="/settings" icon={Settings}>
-                Settings
-              </NavItem>
               <NavItem>
                 <button
                   onClick={handleLogout}
                   className="w-full flex items-center"
                 >
                   <LogOut size={35} className="h-5 w-5 mr-3" />
-                  <span className="text-sm md:text-base text-gray-600">
-                    Logout
-                  </span>
+                  <span className="text-sm md:text-base">Logout</span>
                 </button>
               </NavItem>
             </div>

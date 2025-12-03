@@ -17,14 +17,14 @@ export const Navbar = ({
   mobileBreakpoint = "lg",
   position = "fixed",
   backgroundColor = "bg-white",
-  textColor = "text-gray-800",
+  textColor = "text-white",
   activeTextColor = "text-blue-600",
   hoverTextColor = "hover:text-blue-500",
   dropdownBackgroundColor = "bg-white",
   dropdownTextColor = "text-gray-800",
   dropdownHoverBackgroundColor = "hover:bg-gray-100",
   dropdownBorderColor = "border-gray-200",
-  hamburgerColor = "text-gray-800",
+  hamburgerColor = "text-primary",
   drawerBackgroundColor = "bg-white",
   drawerWidth = "w-64",
   shadow = "",
@@ -162,7 +162,7 @@ export const Navbar = ({
                 : ""
             } items-center justify-center flex-1 mx-4`}
           >
-            <ul className="flex bg-white/80 backdrop-blur-md px-4 py-3 rounded-full">
+            <ul className="flex px-4 text-white font-semibold py-3 rounded-full">
               {navItems
                 ?.filter(shouldShowRoute)
                 ?.map((item: NavItem, index: number) => (
