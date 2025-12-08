@@ -1,11 +1,11 @@
-import React from 'react';
+import SwitchDashboardLayout from "@/src/components/pages/SwitchDashboardLayout/SwitchDashboardLayout";
 
 const DashboardPage = () => {
-    return (
-        <div>
-            dashboard
-        </div>
-    );
+  return (
+    <>
+      <SwitchDashboardLayout />
+    </>
+  );
 };
 
 export default DashboardPage;
