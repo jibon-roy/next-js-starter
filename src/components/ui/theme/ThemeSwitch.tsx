@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
-import { useTheme } from "next-themes";
+import { useTheme } from "@/src/components/theme/ThemeProvider";
 import { Moon, SunIcon } from "lucide-react";
 
 const ThemeSwitch = ({

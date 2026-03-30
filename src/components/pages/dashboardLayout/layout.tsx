@@ -3,7 +3,7 @@
 import type { ReactNode } from "react";
 import Sidebar from "./sidebar";
 import TopNav from "./top-nav";
-import { useTheme } from "next-themes";
+import { useTheme } from "@/src/components/theme/ThemeProvider";
 import { useEffect, useState } from "react";
 
 interface LayoutProps {

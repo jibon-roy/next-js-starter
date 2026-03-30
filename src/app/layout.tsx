@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider } from "next-themes";
 import ReduxStoreProvider from "@/src/redux/ReduxStoreProvider";
+import ThemeProviderClient from "@/src/components/ThemeProviderClient";
 import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
@@ -163,10 +163,10 @@ export default function RootLayout({
     <html suppressHydrationWarning lang="en">
       <body className={`antialiased`}>
         <ReduxStoreProvider>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ThemeProviderClient>
             <div className="bg-white dark:bg-black">{children}</div>
             <Toaster />
-          </ThemeProvider>
+          </ThemeProviderClient>
         </ReduxStoreProvider>
       </body>
     </html>
